@@ -18,9 +18,14 @@ form.on('submit', runHandler)
 
 // handler function to run when user inputs date
 function runHandler(){
+
+
+
+    
     let input = d3.select('#datetime')
     let value = input.property('value')
-    
+    // let inputCity = d3.select('#city')
+    console.log(value)
     //emtpy table
     tbody.html('')
 
@@ -29,9 +34,8 @@ function runHandler(){
 
     //insert filtered data into table 
     createTable(newResult)
-
-    // Prevent the page from refreshing
     d3.event.preventDefault();
+
 }
 
 //function to create new table 
