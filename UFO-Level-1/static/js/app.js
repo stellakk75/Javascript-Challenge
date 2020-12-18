@@ -1,13 +1,13 @@
-// from data.js
+// data from data.js
 var tableData = data;
 
-// reference to body and table
+// reference to body of table 
 var tbody = d3.select('tbody');
 
-// creating table using function 
+// creating unfiltered table  
 createTable(tableData);
 
-// filter button and event handler
+// selecting filter button and event handler
 let filterButton = d3.select('#filter-btn').on('click', runHandler);
 
 // handler function to run when user inputs date
@@ -27,8 +27,6 @@ function runHandler(){
 
     //insert filtered data into table 
     createTable(newResult);
-
-
 }
 
 //function to create new table 
