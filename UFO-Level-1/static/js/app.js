@@ -29,6 +29,9 @@ function runHandler(){
 
     //insert filtered data into table 
     createTable(newResult)
+
+    // Prevent the page from refreshing
+    d3.event.preventDefault();
 }
 
 //function to create new table 
